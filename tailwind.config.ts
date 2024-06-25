@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors : {
-        red: "rgba(var(--color-red) / <alpha-value>)",
-        yellow: "rgba(var(--color-yellow) / <alpha-value>)",
-        blue: "rgba(var(--color-blue) / <alpha-value>)",
+        "site-red": "rgba(var(--color-red) / <alpha-value>)",
+        "site-yellow": "rgba(var(--color-yellow) / <alpha-value>)",
+        "site-blue": "rgba(var(--color-blue) / <alpha-value>)",
         name: "rgba(var(--color-name) / <alpha-value>)",
       },
       backgroundImage: {

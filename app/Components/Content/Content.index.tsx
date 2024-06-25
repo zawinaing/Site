@@ -11,8 +11,10 @@ export default function Content() {
             <span className="font-bold text-blue-500">Neurology</span> in <span className="font-bold text-blue-500">London</span>
          </article>
 
-         <div className="space-y-5">
-            <UserCard />
+         <div className="space-y-">
+            <UserCard isRecommended={true} />
+            <UserCard isRecommended={false} />
+            <UserCard isRecommended={false} />
          </div>
       </section>
    );
