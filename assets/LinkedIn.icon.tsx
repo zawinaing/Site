@@ -1,12 +1,10 @@
-
 export default function LinkedInIcon() {
   return (
     <svg
-      fill="red"
+      fill="#E31417"
       version="1.1"
-      id="Capa_1"
-      width="18"
-      height="18"
+      width="15"
+      height="15"
       viewBox="0 0 552.77 552.77"
     >
       <g>

@@ -19,7 +19,7 @@ export default function Footer() {
     {
       key: 2,
 
-      icon: <InstagramIcon />,
+      icon: <TwitterIcon />,
     },
     {
       key: 3,
@@ -29,13 +29,16 @@ export default function Footer() {
     {
       key: 4,
 
-      icon: <TwitterIcon />,
+      icon: <InstagramIcon />,
     },
   ];
 
   return (
-    <footer className="bg-[#05134b] px-20 pb-32 pt-12 flex gap-28 items-start">
-      <div className="flex flex-col">
+    <footer className="bg-[#05134b] px-20 pb-20 pt-12 flex flex-shrink-0 gap-28 h-full relative">
+      <div className="text-[10px] text-gray-400 mt-auto absolute bottom-0">
+        &copy;eSupralife 2011 All right reserved
+      </div>
+      <div className="flex flex-col h-full">
         <Image
           width={20}
           height={20}
@@ -79,11 +82,11 @@ export default function Footer() {
         <label aria-hidden htmlFor="#">
           <strong className="text-white">Portals</strong>
         </label>
-        <button className="mt-5 w-full rounded-[40px] bg-red-700 px-3 py-1 inline-flex items-center gap-2">
+        <button className="mt-5 w-full rounded-[40px] bg-[#DF1119] px-3 py-1 inline-flex items-center justify-between gap-2">
           <div className=" text-white text-xs font-semibold">Sign Up</div>
           <ChevronIcon />
         </button>
-        <button className="mt-5 w-full rounded-[40px] bg-red-700 px-3 py-1 inline-flex items-center gap-2">
+        <button className="mt-5 w-full rounded-[40px] bg-[#2A4C93] px-3 py-1 inline-flex items-center justify-between gap-2">
           <div className=" text-white text-xs font-semibold">Login</div>
           <ChevronIcon />
         </button>

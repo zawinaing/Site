@@ -11,13 +11,16 @@ import {
 export default function Nav() {
   return (
     <header>
-      {/* TODO: Make more dynamic */}
-      <nav className="bg-[#05134b] flex justify-between px-5 py-3">
-        <div className="">
-          <Image width={160} height={80} src="/header_logo.svg" alt="logo" />
-        </div>
+      <nav className="bg-[#0b1b3c] flex justify-between px-5 py-3">
+        <Image
+          className="cursor-pointer opacity-90 hover:opacity-100"
+          width={160}
+          height={80}
+          src="/header_logo.svg"
+          alt="logo"
+        />
         <div className="flex items-center justify-center gap-4 ">
-          <div className="block text-yellow-600 font-semibold text-xs ">
+          <div className="block text-[#DD5A19] font-semibold text-xs ">
             Provide&apos s Console
           </div>
           <div className="bg-white rounded-[20px] flex items-center justify-between px-2 py-1 h-full">
@@ -26,7 +29,7 @@ export default function Nav() {
               type="search"
               placeholder="Search Health Provider Officers"
             />
-            <div className="bg-red-500 rounded-full w-fit p-[5px]">
+            <div className="bg-[#D91417] rounded-full w-fit p-[5px]">
               <SearchIcon />
             </div>
           </div>
@@ -40,15 +43,15 @@ export default function Nav() {
           </div>
           <div className=" h-full flex items-center justify-center gap-2 bg-blue-400/50 rounded-[20px] px-[10px]">
             <PatientIcon />
-            <p className="font-medium text-stone-200">I&aposm a Patient</p>
+            <p className="font-medium text-stone-200">{`I'm a Patient`}</p>
           </div>
           <div className="h-full flex items-center justify-center gap-2 bg-blue-400/50 rounded-[20px] px-[10px]">
             <PatientIcon />
-            <p className="font-medium text-stone-200">I&aposm a Provider</p>
+            <p className="font-medium text-stone-200">{`I'm a Provider`}</p>
           </div>
         </div>
       </nav>
-      <section className="bg-indigo-900 py-5 px-20">
+      <section className="bg-[#2B4C93] py-5 px-20">
         <div className="bg-white flex justify-between w-full pl-10 pr-2 py-1 rounded-[40px]">
           <input
             className="bg-transparent border-none outline-none text-md text-black placeholder:text-gray-500 placeholder:font-semibold text-sm"

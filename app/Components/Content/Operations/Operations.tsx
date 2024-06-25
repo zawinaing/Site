@@ -9,14 +9,14 @@ export default function Operations() {
                <label htmlFor="#" className="font-bold text-xs">
                   Show
                </label>
-               <button className="bg-[#adb5bd] border border-t-[2px] border-gray-400 rounded-[5px] w-[40px] h-[30px]">50</button>
+               <button className="bg-[#D4D4D4] hover:bg-[#e6dddd] border border-t-[2px] border-gray-400 rounded-[5px] w-[40px] h-[30px]">50</button>
                <button className="border border-gray-300 rounded-[5px] w-[40px] h-[30px]">300</button>
             </div>
             <div className="flex items-center gap-3">
                <label htmlFor="#" className="font-bold text-xs">
                   View
                </label>
-               <button className="bg-[#adb5bd] border border-t-[2px] border-gray-400 rounded-[5px] px-2 py-[3px]">
+               <button className="bg-[#D4D4D4] hover:bg-[#e6dddd] border border-t-[2px] border-gray-400 rounded-[5px] px-2 py-[3px]">
                   <ListViewIcon />
                </button>
                <button className="border border-t-[2px] border-gray-300 rounded-[5px] px-2 py-[3px]">

@@ -7,3 +7,9 @@
     text-wrap: balance;
   }
 }
+
+@layer base {
+  :root {
+    --color-red: 217 20 23;
+  }
+}

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Instagram() {
   return (
-    <svg width="18" height="18" viewBox="0 0 20 20" version="1.1">
+    <svg width="15" height="15" viewBox="0 0 20 20" version="1.1">
       <title>instagram [#167]</title>
       <desc>Created with Sketch.</desc>
       <defs></defs>
@@ -16,7 +16,7 @@ export default function Instagram() {
         <g
           id="Dribbble-Light-Preview"
           transform="translate(-340.000000, -7439.000000)"
-          fill="red"
+          fill="#E31417"
         >
           <g id="icons" transform="translate(56.000000, 160.000000)">
             <path

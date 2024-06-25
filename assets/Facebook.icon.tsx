@@ -1,8 +1,8 @@
 export default function FacebookIcon() {
   return (
     <svg
-      width="18"
-      height="18"
+      width="15"
+      height="15"
       viewBox="-5 0 20 20"
       version="1.1"
     >
@@ -17,9 +17,8 @@ export default function FacebookIcon() {
         fillRule="evenodd"
       >
         <g
-          id="Dribbble-Light-Preview"
           transform="translate(-385.000000, -7399.000000)"
-          fill="red"
+          fill="#E31417"
         >
           <g id="icons" transform="translate(56.000000, 160.000000)">
             <path
