@@ -2,23 +2,37 @@ import React from "react";
 
 export default function AudioMessageIcon() {
   return (
-    <svg width="16" height="17" viewBox="0 0 16 17" fill="none">
-      <rect x="1" width="15" height="15" fill="url(#pattern0_642_11640)" />
-      <path
-        d="M2.18242 15.1528L2.35967 10.3967L6.13978 12.5088L2.18242 15.1528Z"
-        fill="#274D92"
-      />
-      <defs>
-        <pattern
-          id="pattern0_642_11640"
-          patternContentUnits="objectBoundingBox"
-          width="1"
-          height="1"
-        >
-          <use transform="scale(0.00195312)" />
-        </pattern>
-        <image id="image0_642_11640" width="512" height="512" />
-      </defs>
+    <svg
+      viewBox="0 0 24 24"
+      id="Layer_1"
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#274D92"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <defs>
+          <style></style>
+        </defs>
+        <line className="cls-1" x1="12" y1="6.25" x2="12" y2="13.89"></line>
+        <line
+          className="cls-1"
+          x1="16.77"
+          y1="8.16"
+          x2="16.77"
+          y2="11.98"
+        ></line>
+        <line className="cls-1" x1="7.23" y1="8.16" x2="7.23" y2="11.98"></line>
+        <path
+          className="cls-1"
+          d="M18.68,1.48H5.32A3.82,3.82,0,0,0,1.5,5.3v9.54a3.82,3.82,0,0,0,3.82,3.82H9.14L12,21.52l2.86-2.86h3.82a3.82,3.82,0,0,0,3.82-3.82V5.3A3.82,3.82,0,0,0,18.68,1.48Z"
+        ></path>
+      </g>
     </svg>
   );
 }
