@@ -3,9 +3,7 @@ import React from "react";
 export default function Instagram() {
   return (
     <svg width="15" height="15" viewBox="0 0 20 20" version="1.1">
-      <title>instagram [#167]</title>
-      <desc>Created with Sketch.</desc>
-      <defs></defs>
+      <title>instagram</title>
       <g
         id="Page-1"
         stroke="none"

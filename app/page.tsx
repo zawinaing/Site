@@ -1,11 +1,24 @@
-import { Nav, Content, Chosen, Footer } from "./Components/index.components";
+import {
+  Nav,
+  Content,
+  Chosen,
+  Footer,
+  Map,
+} from "./Components/index.components";
 
 function Home() {
   return (
     <main>
       <Nav />
-      <Content />
-      <Chosen />
+      <div className="mx-auto">
+        <div className="flex">
+          <div className=" w-[20vw] small:hidden">
+            <Map />
+          </div>
+          <Content />
+        </div>
+        <Chosen />
+      </div>
       <Footer />
     </main>
   );

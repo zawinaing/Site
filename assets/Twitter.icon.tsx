@@ -1,9 +1,7 @@
 export default function TwitterIcon() {
   return (
     <svg width="15" height="15" viewBox="0 -2 20 20" version="1.1">
-      <title>twitter [#154]</title>
-      <desc>Created with Sketch.</desc>
-      <defs></defs>
+      <title>twitter</title>
       <g
         id="Page-1"
         stroke="none"

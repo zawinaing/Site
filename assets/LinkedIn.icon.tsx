@@ -6,7 +6,8 @@ export default function LinkedInIcon() {
       width="15"
       height="15"
       viewBox="0 0 552.77 552.77"
-    >
+      >
+      <title>linkedin</title>
       <g>
         <g>
           <path

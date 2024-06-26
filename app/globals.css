@@ -12,4 +12,18 @@
   :root {
     --color-red: 217 20 23;
   }
+  @font-face {
+    font-family: "adelle";
+    src: url("/fonts/adelle.otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "poppins";
+    src: url("/fonts/poppins.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
 }
+
+

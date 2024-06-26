@@ -5,67 +5,75 @@ import {
   SearchIcon,
   UkIcon,
   LocationIcon,
-  SearchIconLg,
+  TriangleIcon,
 } from "../../../assets/index.icon";
 
 export default function Nav() {
   return (
     <header>
       <nav className="bg-[#0b1b3c] flex justify-between px-5 py-3">
-        <Image
-          className="cursor-pointer opacity-90 hover:opacity-100"
-          width={160}
-          height={80}
-          src="/header_logo.svg"
-          alt="logo"
-        />
+        <a href="https://www.esupralife.com" className="cursor-pointer">
+          <Image
+            className="cursor-pointer hover:-translate-y-[1px] transition-transform duration-200"
+            width={160}
+            height={80}
+            src="/header_logo.svg"
+            alt="logo"
+          />
+        </a>
         <div className="flex items-center justify-center gap-4 ">
-          <div className="block text-[#DD5A19] font-semibold text-xs ">
+          <div className="block text-[#DD5A19] hover:text-[#f3905f] transition-color duration-200 font-semibold text-xs cursor-pointer">
             Provide&apos s Console
           </div>
           <div className="bg-white rounded-[20px] flex items-center justify-between px-2 py-1 h-full">
             <input
-              className="bg-transparent border-none outline-none text-xs text-black w-[250px]"
+              className="bg-transparent border-none outline-none text-xs text-black w-[250px] hover:placeholder:text-black"
               type="search"
               placeholder="Search Health Provider Officers"
             />
-            <div className="bg-[#D91417] rounded-full w-fit p-[5px]">
+            <button className="bg-[#D91417] hover:bg-[#c53f43] active:bg-[#661f1f] rounded-full w-fit p-[5px]">
               <SearchIcon />
-            </div>
+            </button>
           </div>
-          <div className="h-full flex items-center justify-center gap-2 bg-blue-400/50 rounded-[20px] px-2">
-            <div>
+          <div className="group h-full flex items-center justify-center gap-2 bg-[#2B4E93] hover:bg-[#2b65db] transition-colors duration-200 cursor-pointer rounded-[20px] px-2">
+            <div className="flex items-center justify-center">
+              <div className="mx-[3px] -rotate-180">
+                <TriangleIcon />
+              </div>
               <GlobeIcon />
             </div>
-            <div>
+            <div className="flex items-center justify-center">
               <UkIcon />
+              <div className="mx-[3px] -rotate-180">
+                <TriangleIcon />
+              </div>
             </div>
           </div>
-          <div className=" h-full flex items-center justify-center gap-2 bg-blue-400/50 rounded-[20px] px-[10px]">
+          <div className="group  h-full flex items-center justify-center gap-2 bg-[#2B4E93] hover:bg-[#2b65db] transition-colors duration-200 cursor-pointer rounded-[20px] px-[10px]">
             <PatientIcon />
-            <p className="font-medium text-stone-200">{`I'm a Patient`}</p>
+            <p className="font-medium text-stone-200 group-hover:text-white">{`I'm a Patient`}</p>
           </div>
-          <div className="h-full flex items-center justify-center gap-2 bg-blue-400/50 rounded-[20px] px-[10px]">
+          <div className="group h-full flex items-center justify-center gap-2 bg-[#2B4E93] hover:bg-[#2b65db] transition-colors duration-200 cursor-pointer rounded-[20px] px-[10px]">
             <PatientIcon />
-            <p className="font-medium text-stone-200">{`I'm a Provider`}</p>
+            <p className="font-medium text-stone-200 group-hover:text-white">{`I'm a Provider`}</p>
           </div>
         </div>
       </nav>
       <section className="bg-[#2B4C93] py-5 px-20">
         <div className="bg-white flex justify-between w-full pl-10 pr-2 py-1 rounded-[40px]">
           <input
-            className="bg-transparent border-none outline-none text-md text-black placeholder:text-gray-500 placeholder:font-semibold text-sm"
+            className="bg-transparent border-none outline-none text-md text-black placeholder:text-gray-500 placeholder:font-semibold text-sm hover:placeholder:text-black"
             type="search"
             placeholder="Search Department"
           />
           <input
-            className="bg-transparent border-none outline-none text-md text-black placeholder:text-gray-500 placeholder:font-semibold text-sm"
+            className="bg-transparent border-none outline-none text-md text-black placeholder:text-gray-500 placeholder:font-semibold text-sm hover:placeholder:text-black"
             type="search"
             placeholder="Specialty/Illness/Name"
           />
           <div className="w-fit flex items-center justify-center ">
             <input
-              className="bg-transparent border-none outline-none text-md text-black placeholder:text-gray-500 placeholder:font-semibold text-sm"
+              className="bg-transparent border-none outline-none text-md text-black placeholder:text-gray-500 placeholder:font-semibold text-sm hover:placeholder:text-black"
               type="search"
               placeholder="Type or Use my location"
             />
@@ -84,7 +92,7 @@ export default function Nav() {
               />
               <label
                 htmlFor="country-option-1"
-                className="text-xs font-medium text-gray-800 ml-2 block"
+                className="cursor-pointer text-xs font-medium text-gray-800 ml-2 block hover:text-black"
               >
                 Global
               </label>
@@ -101,7 +109,7 @@ export default function Nav() {
               />
               <label
                 htmlFor="country-option-2"
-                className="text-xs font-medium text-gray-800 ml-2 block"
+                className="cursor-pointer text-xs font-medium text-gray-800 ml-2 block hover:text-black"
               >
                 National
               </label>
@@ -118,16 +126,15 @@ export default function Nav() {
               />
               <label
                 htmlFor="country-option-3"
-                className="text-xs font-medium text-gray-800 ml-2 block"
+                className="cursor-pointer text-xs font-medium text-gray-800 ml-2 block hover:text-black"
               >
                 Near me
               </label>
             </div>
           </div>
-          <div className="w-14 h-auto  border border-red-400/70 rounded-[30px] flex items-center justify-center">
-            {/* TODO: Change Icon Component */}
+          <div className="w-14 h-auto border border-[#E6111A] hover:border-[#d17075] rounded-[30px] flex items-center justify-center cursor-pointer">
             <svg
-              className="stroke-red-400"
+              className="stroke-[#E6111A] hover:stroke-[#d17075]  transition-transform duration-200  hover:scale-[.95]"
               xmlns="http://www.w3.org/2000/svg"
               width="25"
               height="25"

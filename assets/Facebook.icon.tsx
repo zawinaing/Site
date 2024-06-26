@@ -6,9 +6,7 @@ export default function FacebookIcon() {
       viewBox="-5 0 20 20"
       version="1.1"
     >
-      <title>facebook [#176]</title>
-      <desc>Created with Sketch.</desc>
-      <defs></defs>
+      <title>facebook</title>
       <g
         id="Page-1"
         stroke="none"

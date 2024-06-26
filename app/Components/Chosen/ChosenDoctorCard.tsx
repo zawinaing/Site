@@ -4,7 +4,7 @@ import { CrossIcon } from "@/assets/index.icon";
 // TODO: Props
 export default function ChosenDoctorCard() {
   return (
-    <div className="w-fit max-w-[200px] relative p-5 flex flex-col items-center gap-3 border border-stone-200 text-center rounded-[5px]">
+    <div className="cursor-pointer hover:bg-white/70 hover:scale-[1.01] hover:shadow-lg hover:drop-shadow-lg  w-fit max-w-[200px] relative p-5 flex flex-col items-center gap-3 border border-stone-200 text-center rounded-[5px]">
       <button
         type="button"
         className="bg-white border border-stone-200 rounded-full p-1 absolute top-0 right-0 -translate-y-2 translate-x-2"
