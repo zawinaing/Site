@@ -14,11 +14,11 @@ export default function Price({
               ? { visibility: "visible" }
               : { visibility: "hidden" }
           }
-          className="w-full bg-[#E6111A] text-xs text-center text-white rounded-t-[inherit] border-t border-t-[#E6111A] py-[2px]"
+          className="w-full bg-[#E6111A] hover:bg-[#d44047] text-xs text-center text-white rounded-t-[inherit] border-t border-t-[#E6111A] py-[2px]"
         >
           Limited time offer
         </div>
-        <div className="rounded-t-[inherit] border border-b-gray-400/60 pl-3 pr-8 py-[3px] flex gap-7 items-end">
+        <div className="cursor-pointer hover:bg-white transition-colors duration-500 rounded-t-[inherit] border border-b-gray-400/60 pl-3 pr-8 py-[3px] flex gap-7 items-end">
           <div className="flex flex-col">
             <p className="text-[10px] font-semibold">First Order</p>
             <strong className="text-3xl">&#163;200</strong>
@@ -31,7 +31,7 @@ export default function Price({
             <strong className="text-sm line-through">&#163;200</strong>
           </div>
         </div>
-        <div className="rounded-b-[inherit] p-3">
+        <div className="cursor-pointer hover:bg-white transition-colors duration-500 rounded-b-[inherit] p-3">
           <div className="flex flex-col">
             <p className="text-[10px] font-semibold">First Order</p>
             <strong className="text-3xl">&#163;200</strong>

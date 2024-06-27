@@ -40,10 +40,24 @@ export default function Nav() {
               <div className="mx-[3px] -rotate-180">
                 <TriangleIcon />
               </div>
-              <GlobeIcon />
+              <div className="relative">
+                <input
+                  type="checkbox"
+                  className="absolute peer w-full h-full opacity-0"
+                />
+                <GlobeIcon />
+                <div className="absolute top-[19px] left-0 hidden peer-checked:block w-[50px] h-[50px] bg-[#2B4E93] -translate-x-[25px] shadow-lg drop-shadow-lg"></div>
+              </div>
             </div>
             <div className="flex items-center justify-center">
-              <UkIcon />
+              <div className="relative">
+                <input
+                  type="checkbox"
+                  className="absolute peer w-full h-full opacity-0"
+                />
+                <UkIcon />
+                <div className="absolute top-[19px] left-0 hidden peer-checked:block w-[50px] h-[50px] bg-[#2B4E93] shadow-lg drop-shadow-lg"></div>
+              </div>
               <div className="mx-[3px] -rotate-180">
                 <TriangleIcon />
               </div>
@@ -60,93 +74,95 @@ export default function Nav() {
         </div>
       </nav>
       <section className="bg-[#2B4C93] py-5 px-20">
-        <div className="bg-white flex justify-between w-full pl-10 pr-2 py-1 rounded-[40px]">
-          <input
-            className="bg-transparent border-none outline-none text-md text-black placeholder:text-gray-500 placeholder:font-semibold text-sm hover:placeholder:text-black"
-            type="search"
-            placeholder="Search Department"
-          />
-          <input
-            className="bg-transparent border-none outline-none text-md text-black placeholder:text-gray-500 placeholder:font-semibold text-sm hover:placeholder:text-black"
-            type="search"
-            placeholder="Specialty/Illness/Name"
-          />
-          <div className="w-fit flex items-center justify-center ">
+        <div className="max-w-[1600px] mx-auto">
+          <div className="bg-white flex justify-between w-full pl-10 pr-2 py-1 rounded-[40px]">
             <input
               className="bg-transparent border-none outline-none text-md text-black placeholder:text-gray-500 placeholder:font-semibold text-sm hover:placeholder:text-black"
               type="search"
-              placeholder="Type or Use my location"
+              placeholder="Search Department"
             />
-            <LocationIcon />
-          </div>
-          <div>
-            <div className="flex items-center">
+            <input
+              className="bg-transparent border-none outline-none text-md text-black placeholder:text-gray-500 placeholder:font-semibold text-sm hover:placeholder:text-black"
+              type="search"
+              placeholder="Specialty/Illness/Name"
+            />
+            <div className="w-fit flex items-center justify-center ">
               <input
-                id="country-option-1"
-                type="radio"
-                name="countries"
-                value="Global"
-                className=" border-gray-300 focus:ring-2 focus:ring-blue-300 bg-transparent checked:before:bg-red-400"
-                aria-labelledby="country-option-1"
-                aria-describedby="country-option-1"
+                className="bg-transparent border-none outline-none text-md text-black placeholder:text-gray-500 placeholder:font-semibold text-sm hover:placeholder:text-black"
+                type="search"
+                placeholder="Type or Use my location"
               />
-              <label
-                htmlFor="country-option-1"
-                className="cursor-pointer text-xs font-medium text-gray-800 ml-2 block hover:text-black"
-              >
-                Global
-              </label>
+              <LocationIcon />
             </div>
-            <div className="flex items-center">
-              <input
-                id="country-option-2"
-                type="radio"
-                name="countries"
-                value="National"
-                className=" border-gray-300 focus:ring-2 focus:ring-blue-300"
-                aria-labelledby="country-option-2"
-                aria-describedby="country-option-2"
-              />
-              <label
-                htmlFor="country-option-2"
-                className="cursor-pointer text-xs font-medium text-gray-800 ml-2 block hover:text-black"
-              >
-                National
-              </label>
+            <div>
+              <div className="flex items-center">
+                <input
+                  id="country-option-1"
+                  type="radio"
+                  name="countries"
+                  value="Global"
+                  className=" border-gray-300 focus:ring-2 focus:ring-blue-300 bg-transparent checked:before:bg-red-400"
+                  aria-labelledby="country-option-1"
+                  aria-describedby="country-option-1"
+                />
+                <label
+                  htmlFor="country-option-1"
+                  className="cursor-pointer text-xs font-medium text-gray-800 ml-2 block hover:text-black"
+                >
+                  Global
+                </label>
+              </div>
+              <div className="flex items-center">
+                <input
+                  id="country-option-2"
+                  type="radio"
+                  name="countries"
+                  value="National"
+                  className=" border-gray-300 focus:ring-2 focus:ring-blue-300"
+                  aria-labelledby="country-option-2"
+                  aria-describedby="country-option-2"
+                />
+                <label
+                  htmlFor="country-option-2"
+                  className="cursor-pointer text-xs font-medium text-gray-800 ml-2 block hover:text-black"
+                >
+                  National
+                </label>
+              </div>
+              <div className="flex items-center">
+                <input
+                  id="country-option-3"
+                  type="radio"
+                  name="countries"
+                  value="Near me"
+                  className=" border-gray-300 focus:ring-2 focus:ring-blue-300"
+                  aria-labelledby="country-option-3"
+                  aria-describedby="country-option-3"
+                />
+                <label
+                  htmlFor="country-option-3"
+                  className="cursor-pointer text-xs font-medium text-gray-800 ml-2 block hover:text-black"
+                >
+                  Near me
+                </label>
+              </div>
             </div>
-            <div className="flex items-center">
-              <input
-                id="country-option-3"
-                type="radio"
-                name="countries"
-                value="Near me"
-                className=" border-gray-300 focus:ring-2 focus:ring-blue-300"
-                aria-labelledby="country-option-3"
-                aria-describedby="country-option-3"
-              />
-              <label
-                htmlFor="country-option-3"
-                className="cursor-pointer text-xs font-medium text-gray-800 ml-2 block hover:text-black"
+            <div className="w-14 h-auto border border-[#E6111A] hover:border-[#d17075] rounded-[30px] flex items-center justify-center cursor-pointer">
+              <svg
+                className="stroke-[#E6111A] hover:stroke-[#d17075]  transition-transform duration-200  hover:scale-[.95]"
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                viewBox="0 0 24 24"
+                fill="none"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                Near me
-              </label>
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
             </div>
-          </div>
-          <div className="w-14 h-auto border border-[#E6111A] hover:border-[#d17075] rounded-[30px] flex items-center justify-center cursor-pointer">
-            <svg
-              className="stroke-[#E6111A] hover:stroke-[#d17075]  transition-transform duration-200  hover:scale-[.95]"
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="25"
-              viewBox="0 0 24 24"
-              fill="none"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
           </div>
         </div>
       </section>

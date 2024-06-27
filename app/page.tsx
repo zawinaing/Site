@@ -10,7 +10,7 @@ function Home() {
   return (
     <main>
       <Nav />
-      <div className="mx-auto">
+      <div className="mx-auto max-w-[1600px]">
         <div className="flex">
           <div className=" w-[20vw] small:hidden">
             <Map />

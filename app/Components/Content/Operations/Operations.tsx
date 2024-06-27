@@ -66,15 +66,20 @@ export default function Operations() {
             <div className="border border-gray-400 rounded-[20px] px-5 min-w-[170px] inline-flex justify-between items-center">
               <label
                 htmlFor="sort"
-                className="text-[10px] cursor-pointer hover:placeholder:text-black"
+                className="text-[10px] cursor-pointer hover:placeholder:text-black whitespace-nowrap"
               >
                 Sort by
               </label>
               <select
                 name="sort"
                 id="sort"
-                className="customChevron cursor-pointer hover:placeholder:text-black"
-              ></select>
+                className="customChevron cursor-pointer hover:placeholder:text-black text-[10px] w-full outline-none border-none"
+              >
+                <option value="option1"></option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+              </select>
               <svg
                 className="cursor-pointer hover:translate-y-[1px]"
                 width="20"
@@ -97,15 +102,20 @@ export default function Operations() {
             <div className="border border-gray-400 rounded-[20px] px-5 min-w-[170px] inline-flex justify-between items-center">
               <label
                 htmlFor="sort"
-                className="text-[10px] cursor-pointer hover:placeholder:text-black"
+                className="text-[10px] cursor-pointer hover:placeholder:text-black whitespace-nowrap"
               >
-                Distance between
+                Select Distance
               </label>
               <select
                 name="sort"
                 id="sort"
-                className="customChevron cursor-pointer hover:placeholder:text-black"
-              ></select>
+                className="customChevron cursor-pointer hover:placeholder:text-black text-[10px] outline-none border-none"
+              >
+                <option value="option1"></option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+              </select>
               <svg
                 className="cursor-pointer hover:translate-y-[1px]"
                 width="20"

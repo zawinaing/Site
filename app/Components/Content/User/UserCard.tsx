@@ -12,22 +12,51 @@ import {
   MeetingIcon,
   VideoIcon,
   AudioMessageIcon,
-  TwentyFourIcon
+  TwentyFourIcon,
 } from "../../../../assets/index.icon";
+import { Fragment } from "react";
+
+type ArrayItems = "text" | "phone" | "audio" | "video" | "meet" | "24h";
 
 export default function UserCard({
-  isRecommended = false,
-  isOffer = false,
+  isRecommended,
+  isOffer,
+  description,
+  fellowShip,
+  hospitals,
+  image,
+  name,
+  services,
+  position,
+  rating,
 }: {
   isRecommended: boolean;
   isOffer: boolean;
+  description: string;
+  fellowShip: string[];
+  hospitals: any[];
+  image: string | null;
+  name: string;
+  services: ArrayItems[];
+  position: string;
+  rating: number;
+  live?: boolean;
 }) {
+  const servicesComponents = {
+    text: <ServiceCard icon={<MessageIcon />} price={25} />,
+    phone: <ServiceCard icon={<AudioMessageIcon />} price={25} />,
+    audio: <ServiceCard icon={<PhoneIcon />} price={25} />,
+    video: <ServiceCard icon={<VideoIcon />} price={25} />,
+    meet: <ServiceCard icon={<MeetingIcon />} price={25} />,
+    "24h": <ServiceCard icon={<TwentyFourIcon />} price={25} />,
+  };
+
   return (
-    <div className="w-full mx-auto">
+    <div className="w-fit mr-auto">
       {isRecommended && (
-        <div className="uppercase text-xs font-semibold px-3 py-1 text-white w-full bg-[#E6111A] relative">
+        <div className="group uppercase text-xs font-semibold px-3 py-1 text-white w-full bg-[#E6111A] hover:bg-[#d44047] relative">
           <p className="font-medium">highly recommended</p>
-          <div className="absolute top-0 right-0 -translate-y-[1px] -translate-x-[10px] z-[1000]">
+          <div className="absolute top-0 right-0 -translate-y-[1px] -translate-x-[10px] z-[1000] group-hover:translate-x-[1px] transition-transform duration-500">
             <RibbonIcon />
           </div>
         </div>
@@ -39,7 +68,7 @@ export default function UserCard({
             <Image
               width={100}
               height={50}
-              src="/demo.jpg"
+              src={image || "/demo.jpg"}
               alt="user"
               className="w-[120px] h-[130px] rounded-full object-cover"
             />
@@ -47,7 +76,7 @@ export default function UserCard({
               <h3 className="text-blue-700 font-bold">Live</h3>
             </div>
             <div className="mt-auto mb-3 text-center text-sm text-stone-700">
-              <strong>Avg Rating 4/5</strong>
+              <strong>Avg Rating {rating}/5</strong>
               <StarRating />
             </div>
           </div>
@@ -63,32 +92,27 @@ export default function UserCard({
               </button>
             </div>
             <strong className="text-3xl text-[#4D79DC] font-adelle cursor-pointer">
-              <a href="https:www.supralife.com">Dr Nader Khandanpour</a>
+              <a href="https:www.supralife.com">{name}</a>
             </strong>
-            <h3 className="font-poppins text-xl text-[#5f5d5d] font-medium tracking-wide">
-              Consultant Neuroradiobgist
+            <h3 className="font-poppins text-xl text-[#5f5d5d] font-medium tracking-wide capitalize">
+              {position}
             </h3>
             <div className="uppercase font-medium text-stone-500 text-xs flex">
               <h3 className="mr-5">fellowship trained</h3>
-              <div className="not-last:border-r-2 not-last:border-r-blue-500 px-1 uppercase text-[#2C4999] font-semibold tracking-wide">
-                vascular neurology
-              </div>
-              <div className="not-last:border-r-2 not-last:border-r-blue-500 px-1 uppercase text-[#2C4999] font-semibold tracking-wide">
-                headache medicine
-              </div>
-              <div className="not-last:border-r-2 not-last:border-r-blue-500 px-1 uppercase text-[#2C4999] font-semibold tracking-wide">
-                epilepsy
-              </div>
+              {fellowShip.map((data, index) => (
+                <Fragment key={index}>
+                  <div className="not-last:border-r-2 not-last:border-r-blue-500 px-1 uppercase text-[#2C4999] font-semibold tracking-wide">
+                    {data}
+                  </div>
+                </Fragment>
+              ))}
             </div>
             <div className="flex gap-5 -ml-3">
-              <HospitalLocations
-                title="Spire Little Aston hospital"
-                address="Sutton Conldfield little aston halt"
-              />
-              <HospitalLocations
-                title="Spire Little Aston hospital"
-                address="Sutton Conldfield little aston halt"
-              />
+              {hospitals.map(({ name, subtitle }) => (
+                <Fragment key={name}>
+                  <HospitalLocations name={name} subtitle={subtitle} />
+                </Fragment>
+              ))}
             </div>
             <div className="flex items-center flex-shrink-0 max-w-[450px]">
               <p className="truncate text-[10px] font-bold text-stone-700 ">
@@ -105,12 +129,9 @@ export default function UserCard({
           </div>
 
           <div className="flex flex-col justify-between gap-3">
-            <ServiceCard icon={<MessageIcon />} price={25} />
-            <ServiceCard icon={<AudioMessageIcon />} price={25} />
-            <ServiceCard icon={<PhoneIcon />} price={25} />
-            <ServiceCard icon={<VideoIcon />} price={25} />
-            <ServiceCard icon={<MeetingIcon />} price={25} />
-            <ServiceCard icon={<TwentyFourIcon />} price={25} />
+            {services.map((service, index) => (
+              <Fragment key={index}>{servicesComponents[service]}</Fragment>
+            ))}
           </div>
 
           <div className="border-l border-l-gray-400/60 pl-5 flex flex-shrink-0 gap-3 justify-between">
